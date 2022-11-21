@@ -1,10 +1,8 @@
-import { useRecoilState } from "recoil";
-import { counterState } from "./counterState";
-import { incrementByState } from "./incrementByState";
+import { useState } from "react";
 
 export const CounterButton = () => {
-  const [numberOfClicks, setNumberOfClicks] = useRecoilState(counterState);
-  const [incrementBy, setIncrementBy] = useRecoilState(incrementByState);
+  const [numberOfClicks, setNumberOfClicks] = useState(0);
+  const [incrementBy, setIncrementBy] = useState(1);
 
   return (
     <>
